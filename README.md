@@ -1,2 +1,2 @@
-# Código em PHP
+# Código em PHP - aula do Senac
 

@@ -1,8 +1,8 @@
 <?php
 
-include 'conexao.php'
+include "conexao.php";
 
-$buscar_cadastros = "SELECT * FROM clientes_fazenda ORDER By nome asc";
+$buscar_cadastros = "SELECT * FROM clientes_fazenda ORDER BY nome asc ";
 $query_cadastros = mysqli_query($conx, $buscar_cadastros) or die(mysqli_error($conx));
 $receber_dados = mysqli_fetch_array($query_cadastros);
 
@@ -15,7 +15,7 @@ $receber_dados = mysqli_fetch_array($query_cadastros);
 
 ?>
 
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="pt=br">
 
 <head>
@@ -49,7 +49,7 @@ $receber_dados = mysqli_fetch_array($query_cadastros);
                 $nome = $receber_dados['nome'];
                 $mail = $receber_dados['email'];
                 $telefone = $receber_dados['telefone']    
-                }
+                
 
                 ?>
 
@@ -58,7 +58,7 @@ $receber_dados = mysqli_fetch_array($query_cadastros);
                     <td><?php echo $email; ?></td>
                     <td><?php echo $telefone; ?></td>
                 </tr>
-
+            <?php }; ?>
         </tbody>
     </table>            
 <br><br>
